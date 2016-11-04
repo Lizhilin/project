@@ -1,0 +1,16 @@
+/*** Functions ***/
+
+/**
+ * 基于背景颜色 动态改变文字颜色
+ * Set font color according the background
+ * source: http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
+ * @param {String} $background - background color - format accepted: hsla, rgb, #
+ * @return {String} #color
+ */
+@function set-text-color($background) {
+    @if (lightness($background) > 50) {//lightness() 亮度判断函数，返回0-100，其中0是最暗和100最亮
+        @return #000; // Lighter backgorund, return dark color
+    } @else {
+        @return #fff; // Darker background, return light color
+    }
+}

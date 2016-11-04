@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* Portfolio Style
+   - Version:  1.2.3
+   - Author:   @ostrenaud_clem
+*/
+/*** Parameters ***/
+/*** Functions ***/
+/**
+ * 基于背景颜色 动态改变文字颜色
+ * Set font color according the background
+ * source: http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
+ * @param {String} $background - background color - format accepted: hsla, rgb, #
+ * @return {String} #color
+ */
+/*** Button mixins ***/
+/**
+ * Generate button style
+ * @param {String} - $name - required
+ * @param {String} - $background - required - format accepted: hsla, rgb, #
+ * @param {Strong} - $color - optionnal - format accepted: hsla, rgb, #
+ * If no $color specify, the 'set-text-color' function is called
+ * go check the _function.scss
+ */
+/*** Button components ***/
+.button {
+  border: solid 1px #e0e0e0;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  text-decoration: none;
+  transition-duration: .4s;
+  transition-property: color border; }
+
+/*** Responsive ***/
+@media screen and (max-width: 600px) {
+  .post-cover {
+    width: 100%; } }
+
+@media screen and (max-width: 480px) {
+  .nav-desktop {
+    display: none; }
+  .nav-toggle {
+    display: block; } }
+
+.test {
+  color: #fcf; }
